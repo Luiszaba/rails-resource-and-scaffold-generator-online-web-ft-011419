@@ -119,3 +119,19 @@ Cannot render console from 98.113.24.2! Allowed networks: 127.0.0.1, ::1, 127.0.
 Processing by ArticlesController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"x9Hpqlrhcv4WtEWdBVxcghUf0kaTXJZo6zsyckVAuA/pFbfx3zB5milvKGsfmbFSWGjFjaE+UJBKmB32o+LfaA==", "article"=>{"title"=>"Beats", "body"=>"Beats by Beats"}, "commit"=>"Create Article"}
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Beats"], ["body", "Beats by Beats"], ["created_at", "2019-03-26 15:49:12.186159"], ["updated_at", "2019-03-26 15:49:12.186159"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.89.225.105:60926/articles/1
+Completed 302 Found in 11ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/articles/1" for 98.113.24.2 at 2019-03-26 15:49:12 +0000
+Cannot render console from 98.113.24.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
